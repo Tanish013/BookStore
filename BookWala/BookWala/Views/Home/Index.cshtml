@@ -7,11 +7,27 @@
 
 <html>
 <head>
+    <link href="~/css/Site.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
     <title>Index</title>
 </head>
-<body>
-    <h1>Welcome to book Store Application</h1>
+<body class="container">
+    <img src="~/images/logo.jpg" alt="logo" class="logo" />
+
+    <input type="button" value="Click Me" class="btn btn-outline-primary" />
+
+    <h1 class="h1">Welcome to book Store Application</h1>
     <p>This is home page for book store application.</p>
 </body>
+<script src="~/lib/jquery/jquery.js"></script>
+
 </html>
+
+<script>
+    $(document).ready(function () {
+        alert("Page loaded");
+    });
+
+</script>
+

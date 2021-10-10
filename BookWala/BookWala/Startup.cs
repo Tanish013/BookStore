@@ -2,9 +2,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -26,6 +28,14 @@ namespace BookWala
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles();
+            //to add static file other than wwwroot folder
+            //app.UseStaticFiles(new StaticFileOptions
+            //{
+            //    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "StatcFile")),
+            //    RequestPath = "/StaticFiles"
+            //});
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
